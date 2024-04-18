@@ -28,7 +28,7 @@ if __name__ == '__main__':
     network = build_network(cfg, device)
     network = network.to(device)
     loss = PatchLoss().to(device)
-    saved_name = "koa.pth"
+    saved_name = "/home/taft/ALCON_SPC/detect/NEW_PATCHNET/runs/save/CDCNpp_196_0.21588014953797965.pth"
     state = torch.load(saved_name)
 
     network.load_state_dict(state['state_dict'])
